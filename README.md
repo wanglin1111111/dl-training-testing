@@ -58,6 +58,19 @@ dl-training-testing/
     └── test_workflow.py              # 技能输出验证测试
 ```
 
+## 开发与测试
+
+```bash
+# 安装测试依赖（技能运行本身仅需 Python 3.9+ 标准库）
+pip install -r requirements-dev.txt
+
+# 运行技能输出验证测试
+python -m pytest tests/ -q
+
+# 运行输出校验脚本
+python scripts/validate.py SKILL.md
+```
+
 ## 安全红线
 
 1. 所有训练操作**必须先 dry-run**
